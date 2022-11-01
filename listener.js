@@ -68,7 +68,7 @@ function processQueue() {
     console.log(`processing queue...`)
     if (!eventQueue.length) return;
     let event = eventQueue.shift();
-    console.log(`find event ${event}`)
+    console.log(`find event`)
    
     let {trader, name, size, isLong, transactionHash, image} = event
     let txURL = `${explorer}${transactionHash}`;
