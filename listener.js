@@ -17,14 +17,7 @@ const eventQueue = [];
 
 const checkEvents = async () => {
 
-    const embedMsg = new Discord.MessageEmbed()
-    .setColor('#0099ff')
-    .setTitle("Hello World");
-    client.channels.fetch(process.env.DISCORD_CHANNEL)
-    .then(channel => {
-      channel.send(embedMsg);
-    })
-    .catch(console.error);
+  
 
     let positionChangeFilter = clearingHouse.filters.PositionChanged();
 
@@ -41,7 +34,7 @@ const checkEvents = async () => {
     })
 
 
-
+    setInterval(test, 1000)
 
    setInterval(processQueue, 5000);
    
@@ -106,6 +99,19 @@ function processQueue() {
 
 
     return;
+}
+
+
+const test = ()=>{
+    console.log("testing...")
+    const embedMsg = new Discord.MessageEmbed()
+    .setColor('#0099ff')
+    .setTitle("Hello World");
+    client.channels.fetch(process.env.DISCORD_CHANNEL)
+    .then(channel => {
+      channel.send(embedMsg);
+    })
+    .catch(console.error);
 }
 
 
