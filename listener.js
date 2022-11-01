@@ -17,9 +17,12 @@ const eventQueue = [];
 
 const checkEvents = async () => {
 
+    const embedMsg = new Discord.MessageEmbed()
+    .setColor('#0099ff')
+    .setTitle("Hello World");
     client.channels.fetch(process.env.DISCORD_CHANNEL)
     .then(channel => {
-      channel.send("Hello World");
+      channel.send(embedMsg);
     })
     .catch(console.error);
 
