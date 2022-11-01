@@ -1,0 +1,25 @@
+{
+  "name": "nftperp-tradingbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yukairex/nftperp-tradingBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yukairex/nftperp-tradingBot/issues"
+  },
+  "homepage": "https://github.com/yukairex/nftperp-tradingBot#readme",
+  "devDependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
+    "express": "^4.18.2"
+  }
+}
