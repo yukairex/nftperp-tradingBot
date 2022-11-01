@@ -57,6 +57,13 @@ const amms = [
         image:"https://app.nftperp.xyz/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbayc.5fc81905.png&w=3840&q=100",
         url:"https://app.nftperp.xyz/trade/bayc"
     },  
+    {
+        name:"Art Gobbler",
+        address:"0xe56472ddcc9100d933a3d9e1b59c1c63f9f83dd2",
+        collection:"0x60bb1e2aa1c9acafb4d34f71585d7e959f387769",
+        image:"https://app.nftperp.xyz/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgobblers.7c5ceb71.png&w=3840&q=100",
+        url:"https://app.nftperp.xyz/trade/gobblers"
+    }
 ]
 
 
