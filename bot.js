@@ -13,14 +13,7 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 })
 
-// const App = async () => {
-//     // setup discord client
-  
-//     await client.login(TOKEN);
-//     let channel = await client.channels.fetch(discordChannelId); //;
-
-//     channel.send("hello");
-
-// }
-
-// App()
+module.exports = {
+    client,
+    CHANNELID
+}
