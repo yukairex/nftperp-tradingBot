@@ -65,6 +65,7 @@ const processPositionChangeEvents = async (events) => {
 
 
 function processQueue() {
+    console.log(`processing queue...`)
     if (!eventQueue.length) return;
     let event = eventQueue.shift();
    
