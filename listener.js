@@ -86,7 +86,7 @@ function processQueue() {
     .setImage(image)
     .addField("trader",`${trader.slice(0,8)}`, true)
     .addField("size",`${size.toFixed(4)}\u039E`, true)
-    .addField("tx",`[tx](${txURL})`, true)
+    .addField("tx",`[link](${txURL})`, true)
     .setFooter(`by 0xFendiman#3523`)
               
 
