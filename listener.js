@@ -17,6 +17,12 @@ const eventQueue = [];
 
 const checkEvents = async () => {
 
+    client.channels.fetch(process.env.DISCORD_CHANNEL)
+    .then(channel => {
+      channel.send("Hello World");
+    })
+    .catch(console.error);
+
     let positionChangeFilter = clearingHouse.filters.PositionChanged();
 
 
@@ -30,6 +36,8 @@ const checkEvents = async () => {
 
         await processPositionChangeEvents(events);
     })
+
+
 
 
    setInterval(processQueue, 5000);
