@@ -58,7 +58,7 @@ const processPositionChangeEvents = async (events) => {
                 isLong,
                 transactionHash
             }
-            console.log(entry);
+            console.log(event);
             eventQueue.push(event);
   }
 }
@@ -68,6 +68,7 @@ function processQueue() {
     console.log(`processing queue...`)
     if (!eventQueue.length) return;
     let event = eventQueue.shift();
+    console.log(`find event ${event}`)
    
     let {trader, name, size, isLong, transactionHash, image} = event
     let txURL = `${explorer}${transactionHash}`;
@@ -80,6 +81,8 @@ function processQueue() {
     .setImage(image)
     .addField("trader",`${trader.slice(0,8)}`, true)
     .addField("size",`${size.toFixed(4)}\u039E`, true);
+
+    
     client.channels.fetch(process.env.DISCORD_CHANNEL)
     .then(channel => {
       channel.send(embedMsg);
