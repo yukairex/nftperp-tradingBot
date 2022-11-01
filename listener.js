@@ -34,7 +34,7 @@ const checkEvents = async () => {
     })
 
 
-    setInterval(test, 1000)
+   // setInterval(test, 60000)
 
    setInterval(processQueue, 5000);
    
