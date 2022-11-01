@@ -8,6 +8,7 @@ const CHANNELID = process.env.DISCORD_CHANNEL
 
 client.login(TOKEN);
 
+
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 })
