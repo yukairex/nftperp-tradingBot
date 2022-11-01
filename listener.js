@@ -56,7 +56,8 @@ const processPositionChangeEvents = async (events) => {
                 image:nft.image,
                 size:positionNotional,
                 isLong,
-                transactionHash
+                transactionHash,
+                url:nft.url
             }
             console.log(event);
             eventQueue.push(event);
@@ -70,17 +71,20 @@ function processQueue() {
     let event = eventQueue.shift();
     console.log(`find event`)
    
-    let {trader, name, size, isLong, transactionHash, image} = event
+    let {trader, name, size, isLong, transactionHash, image, url} = event
     let txURL = `${explorer}${transactionHash}`;
 
     const embedMsg = new Discord.MessageEmbed()
     .setColor('#0099ff')
     .setTitle(name)
-    .setURL(txURL)
-    .setDescription(`${size.toFixed(4)}\u039E ${isLong?"Long":"Short"} Position has just been opened`)
+    .setURL(url)
+    .setDescription(`${size.toFixed(4)}\u039E **${isLong?"Long":"Short"}**`)
     .setImage(image)
     .addField("trader",`${trader.slice(0,8)}`, true)
-    .addField("size",`${size.toFixed(4)}\u039E`, true);
+    .addField("size",`${size.toFixed(4)}\u039E`, true)
+    .addField("tx",`[tx](${txURL})`, true)
+    .setFooter(`by 0xFendiman#3523`)
+              
 
     
     client.channels.fetch(process.env.DISCORD_CHANNEL)
