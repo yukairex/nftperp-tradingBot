@@ -5,7 +5,7 @@ const provider = new ethers.providers.JsonRpcProvider(
     process.env.ARBITRUM_ENDPOINT
   );
 
-const clearingHouseAddr = '0x1bbd56e80284b7064b44b2f4bc494a268e614d36';
+const clearingHouseAddr = '0x6fc05b7dfe545cd488e9d47d56cfaca88f69a2e1';
 const clearingHouseAbi = require('./abi/nftperpClearingHouseAbi.json');
 const clearingHouse = new Contract(clearingHouseAddr, clearingHouseAbi, provider);
 const {amms} = require("./constant");
