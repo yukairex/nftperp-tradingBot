@@ -89,7 +89,7 @@ function processQueue() {
     .setColor('#0099ff')
     .setTitle(name)
     .setURL(url)
-    .setDescription(`${size.toFixed(3)} **${isLong?"Long":"Short"}**`)
+    .setDescription(`${notional.toFixed(3)}\u039E **${isLong?"Long":"Short"}**`)
     .setImage(image)
     .addField("trader",`${trader.slice(0,8)}`, true)
     .addField("size",`${size.toFixed(3)}`, true)
