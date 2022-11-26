@@ -15,6 +15,8 @@ const explorer = "https://arbiscan.io/tx/"
 
 const eventQueue = [];
 
+const thresh = 0.09;
+
 const checkEvents = async () => {
 
   
@@ -64,7 +66,11 @@ const processPositionChangeEvents = async (events) => {
                 url:nft.url
             }
             console.log(event);
-            eventQueue.push(event);
+
+            if (Math.abs(positionNotional) > thresh){
+              eventQueue.push(event);
+            }
+         
   }
 }
 
@@ -82,10 +88,10 @@ function processQueue() {
     .setColor('#0099ff')
     .setTitle(name)
     .setURL(url)
-    .setDescription(`${size.toFixed(2)}\u039E **${isLong?"Long":"Short"}**`)
+    .setDescription(`${size.toFixed(3)}\u039E **${isLong?"Long":"Short"}**`)
     .setImage(image)
     .addField("trader",`${trader.slice(0,8)}`, true)
-    .addField("size",`${size.toFixed(2)}\u039E`, true)
+    .addField("size",`${size.toFixed(3)}\u039E`, true)
     .addField("tx",`[link](${txURL})`, true)
     .setFooter(`by 0xFendiman#3523`)
               
