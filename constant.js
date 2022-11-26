@@ -33,7 +33,7 @@ const amms = [
         address:"0xb504ac5a974c0856732e6db14589a0a7cc2199e8",
         collection:"0xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb",
         image:"https://app.nftperp.xyz/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpunks.91b06d16.png&w=3840&q=100",
-        url:"https://app.nftperp.xyz/trade/punks"
+        url:"https://beta.nftperp.xyz/trade/punks"
     },
     // {
     //     name:"Moonbirds",
@@ -55,7 +55,7 @@ const amms = [
         address:"0x604ed62f5991d6a2c47b13b9e5d34cc1c5048e99",
         collection:"0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
         image:"https://app.nftperp.xyz/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbayc.5fc81905.png&w=3840&q=100",
-        url:"https://app.nftperp.xyz/trade/bayc"
+        url:"https://beta.nftperp.xyz/trade/bayc"
     },  
     // {
     //     name:"Art Gobbler",
