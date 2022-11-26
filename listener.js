@@ -60,7 +60,8 @@ const processPositionChangeEvents = async (events) => {
                 trader,
                 name:nft.name,
                 image:nft.image,
-                size:positionNotional,
+                notional:positionNotional,
+                size:positionSize,
                 isLong,
                 transactionHash,
                 url:nft.url
@@ -81,7 +82,7 @@ function processQueue() {
     let event = eventQueue.shift();
     console.log(`find event`)
    
-    let {trader, name, size, isLong, transactionHash, image, url} = event
+    let {trader, name, notional, size, isLong, transactionHash, image, url} = event
     let txURL = `${explorer}${transactionHash}`;
 
     const embedMsg = new Discord.MessageEmbed()
@@ -91,7 +92,8 @@ function processQueue() {
     .setDescription(`${size.toFixed(3)}\u039E **${isLong?"Long":"Short"}**`)
     .setImage(image)
     .addField("trader",`${trader.slice(0,8)}`, true)
-    .addField("size",`${size.toFixed(3)}\u039E`, true)
+    .addField("size",`${size.toFixed(3)}`, true)
+    .addField("notional",`${notional.toFixed(3)}\u039E`, true)
     .addField("tx",`[link](${txURL})`, true)
     .setFooter(`by 0xFendiman#3523`)
               
